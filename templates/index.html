@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rss</title>
+</head>
+<body>
+    <diV id="header">
+        <div id="title">RSS</div>
+        <div id="subtitles">
+            <div class="subtitle"><a href="#reddit">Reddit</a></div>
+        </div>
+    </diV>
+    <div class="content">
+        <div id="reddit">
+            <p>r/LifeProTips</p>
+            <ul>
+                {% for feed in LifeProTips_dict %}
+                <li><a href="{{ feed.link }}">{{ feed.title }}</a>--{{ feed.updated }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
